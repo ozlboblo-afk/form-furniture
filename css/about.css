@@ -1,0 +1,390 @@
+/* =========================
+   01. About Hero
+========================= */
+
+.aboutHero {
+  position: relative;
+}
+
+.aboutHeroImg {
+  width: 100%;
+  height: 70svh;
+  min-height: 48rem;
+  background-color: #627a45;
+}
+
+.aboutHeroContent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--space-3xl) var(--content-padding);
+  color: var(--color-text-inverse);
+}
+
+.aboutHeroTitle {
+  margin-bottom: var(--space-lg);
+  font-size: var(--fs-xxl);
+  font-weight: 400;
+  font-family: var(--ff-en);
+  line-height: var(--lh-none);
+  letter-spacing: -0.03em;
+}
+
+.aboutHeroLead {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+/* =========================
+   02. Brand Story
+========================= */
+
+.brandStory {
+  padding-block: var(--section-space);
+}
+
+.brandStory .sectionHeader {
+  padding-inline: var(--content-padding);
+}
+
+.brandStoryContent {
+  display: grid;
+  gap: var(--space-3xl);
+  padding-inline: var(--content-padding);
+}
+
+.brandStoryText {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.brandStoryText p {
+  line-height: var(--lh-relaxed);
+}
+
+.brandStoryText p:first-child {
+  font-size: var(--fs-md);
+  line-height: var(--lh-tight);
+}
+
+.brandStoryImg {
+  width: 100%;
+  background-color: #627a45;
+  aspect-ratio: 4 / 3;
+}
+
+/* =========================
+   03. Concept
+========================= */
+
+.concept {
+  display: grid;
+  gap: var(--space-3xl);
+  padding-block: var(--section-space);
+  background: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+}
+
+.conceptContent {
+  padding-inline: var(--content-padding);
+}
+
+.concept .sectionHeader {
+  margin-bottom: var(--space-3xl);
+}
+
+.conceptTitle {
+  margin-bottom: var(--space-3xl);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-tight);
+}
+
+.conceptList {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.conceptItem {
+  display: grid;
+  padding-top: var(--space-lg);
+  grid-template-columns: 4rem 1fr;
+  column-gap: var(--space-md);
+  row-gap: var(--space-xs);
+  border-top: 1px solid rgb(255 255 255 / 30%);
+}
+
+.conceptNumber {
+  font-size: var(--fs-xs);
+  font-family: var(--ff-en);
+  color: rgb(255 255 255 / 60%);
+  grid-row: span 2;
+}
+
+.conceptName {
+  font-size: var(--fs-base);
+  font-weight: 400;
+}
+
+.conceptText {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  color: rgb(255 255 255 / 75%);
+}
+
+.conceptImg {
+  width: 100%;
+  background-color: #627a45;
+  aspect-ratio: 4 / 3;
+}
+
+/* =========================
+   04. Material / Craftsmanship
+========================= */
+
+.material {
+  padding-block: var(--section-space);
+}
+
+.material .sectionHeader,
+.materialLead {
+  padding-inline: var(--content-padding);
+}
+
+.materialLead {
+  max-width: var(--content-md);
+  margin-bottom: var(--space-3xl);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+.materialList {
+  display: grid;
+  gap: var(--space-3xl);
+  padding-inline: var(--content-padding);
+}
+
+.materialItem {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: auto 1fr;
+}
+
+.materialNumber {
+  padding-top: 0.4rem;
+  font-size: var(--fs-xs);
+  font-family: var(--ff-en);
+  color: var(--color-text-muted);
+}
+
+.materialName {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.materialNameEn {
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  font-family: var(--ff-en);
+  line-height: var(--lh-none);
+  letter-spacing: -0.02em;
+}
+
+.materialNameJa {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}
+
+.materialImg {
+  width: 100%;
+  background-color: #627a45;
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+/* =========================
+   05. Brand Philosophy
+========================= */
+
+.brandPhilosophy {
+  padding-block: var(--section-space);
+  background: var(--color-bg-subtle);
+}
+
+.brandPhilosophyContent {
+  display: grid;
+  gap: var(--space-3xl);
+  padding-inline: var(--content-padding);
+}
+
+.brandPhilosophyTitle {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-tight);
+}
+
+.brandPhilosophyText {
+  max-width: var(--content-md);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+/* =========================
+   PC
+========================= */
+
+@media (width >= 768px) {
+  /* =========================
+     01. About Hero
+  ========================= */
+
+  .aboutHero {
+    min-height: calc(100svh - 8rem);
+  }
+
+  .aboutHeroImg {
+    height: calc(100svh - 8rem);
+    min-height: 64rem;
+  }
+
+  .aboutHeroContent {
+    padding: var(--space-4xl) var(--content-padding);
+  }
+
+  .aboutHeroTitle {
+    margin-bottom: var(--space-xl);
+    font-size: var(--fs-display);
+  }
+
+  /* =========================
+     02. Brand Story
+  ========================= */
+
+  .brandStoryContent {
+    align-items: center;
+    gap: var(--space-4xl);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .brandStoryText {
+    gap: var(--space-2xl);
+  }
+
+  .brandStoryText p:first-child {
+    font-size: var(--fs-lg);
+  }
+
+  .brandStoryImg {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* =========================
+     03. Concept
+  ========================= */
+
+  .concept {
+    align-items: stretch;
+    gap: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  }
+
+  .conceptContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-4xl);
+  }
+
+  .concept .sectionHeader {
+    margin-bottom: var(--space-4xl);
+  }
+
+  .conceptTitle {
+    margin-bottom: var(--space-4xl);
+    font-size: var(--fs-xl);
+  }
+
+  .conceptList {
+    gap: 0;
+  }
+
+  .conceptItem {
+    align-items: start;
+    padding-block: var(--space-lg);
+    grid-template-columns: 5rem 8rem 1fr;
+    column-gap: var(--space-lg);
+  }
+
+  .conceptNumber {
+    grid-row: auto;
+  }
+
+  .conceptName {
+    font-size: var(--fs-base);
+  }
+
+  .conceptText {
+    font-size: var(--fs-xs);
+  }
+
+  .conceptImg {
+    height: 100%;
+    min-height: 64rem;
+    aspect-ratio: auto;
+  }
+
+  /* =========================
+     04. Material / Craftsmanship
+  ========================= */
+
+  .materialLead {
+    margin-bottom: var(--space-4xl);
+  }
+
+  .materialList {
+    gap: var(--space-4xl);
+    padding-inline: 0;
+  }
+
+  .materialItem {
+    position: relative;
+    gap: var(--space-xl);
+    padding-inline: var(--content-padding);
+    grid-template-columns: 8rem 1fr;
+  }
+
+  .materialNumber {
+    padding-top: 0.8rem;
+  }
+
+  .materialName {
+    align-self: center;
+  }
+
+  .materialNameEn {
+    font-size: var(--fs-xl);
+  }
+
+  .materialNameJa {
+    font-size: var(--fs-sm);
+  }
+
+  .materialImg {
+    width: min(100%, 100rem);
+    grid-column: 2;
+    aspect-ratio: 16 / 7;
+  }
+
+  /* =========================
+     05. Brand Philosophy
+  ========================= */
+
+  .brandPhilosophyContent {
+    align-items: end;
+    gap: var(--space-4xl);
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .brandPhilosophyTitle {
+    font-size: var(--fs-display);
+  }
+}

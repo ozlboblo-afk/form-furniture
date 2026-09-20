@@ -33,8 +33,19 @@
     <header class="header">
       <a href="/index.html" class="logo">FORM / FURNITURE</a>
 
-      <nav class="nav">
-        <ul class="navList">
+      <button
+        class="drawerButton"
+        aria-label="メニュー"
+        aria-expanded="false"
+        aria-controls="headerMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="headerNav" id="headerMenu">
+        <ul class="headerNavList">
           <li>
             <a href="/about.html">ABOUT</a>
           </li>
@@ -50,10 +61,12 @@
       </nav>
     </header>
 
+    <div class="drawerOverlay"></div>
+
     <main>
       <section class="hero">
-        <div class="heroImg">
-          <img src="/assets/img/hero/hero.jpg" alt="" />
+        <div class="heroImg visual">
+          <img src="/assets/img/hero.jpg" alt="" />
         </div>
 
         <h1 class="heroTitle">
@@ -72,34 +85,46 @@
 
         <ul class="categoryList">
           <li>
-            <a href="/product.html" class="categoryCard">
-              <img src="/assets/img/product/chair.jpg" alt="" />
+            <a href="/product.html" class="categoryCard visual">
+              <img src="/assets/img/categoryChair.jpg" alt="" />
 
-              <span class="categoryName">CHAIR</span>
+              <div class="categoryInfo">
+                <span class="categoryNumber">01</span>
+                <span class="categoryName">CHAIR</span>
+              </div>
             </a>
           </li>
 
           <li>
-            <a href="/product.html" class="categoryCard">
-              <img src="/assets/img/product/table.jpg" alt="" />
+            <a href="/product.html" class="categoryCard visual">
+              <img src="/assets/img/categoryTable.jpg" alt="" />
 
-              <span class="categoryName">TABLE</span>
+              <div class="categoryInfo">
+                <span class="categoryNumber">02</span>
+                <span class="categoryName">TABLE</span>
+              </div>
             </a>
           </li>
 
           <li>
-            <a href="/product.html" class="categoryCard">
-              <img src="/assets/img/product/sofa.jpg" alt="" />
+            <a href="/product.html" class="categoryCard visual">
+              <img src="/assets/img/categorySofa.jpg" alt="" />
 
-              <span class="categoryName">SOFA</span>
+              <div class="categoryInfo">
+                <span class="categoryNumber">03</span>
+                <span class="categoryName">SOFA</span>
+              </div>
             </a>
           </li>
 
           <li>
-            <a href="/product.html" class="categoryCard">
-              <img src="/assets/img/product/storage.jpg" alt="" />
+            <a href="/product.html" class="categoryCard visual">
+              <img src="/assets/img/categoryStorage.jpg" alt="" />
 
-              <span class="categoryName">STORAGE</span>
+              <div class="categoryInfo">
+                <span class="categoryNumber">04</span>
+                <span class="categoryName">STORAGE</span>
+              </div>
             </a>
           </li>
         </ul>
@@ -111,8 +136,8 @@
         </div>
 
         <article class="pickupContent">
-          <div class="pickupImg">
-            <img src="/assets/img/product/pickup-chair.jpg" alt="WOOD CHAIR" />
+          <div class="pickupImg visual">
+            <img src="/assets/img/pickup.jpg" alt="WOOD CHAIR" />
           </div>
 
           <div class="pickupInfo">
@@ -148,10 +173,6 @@
       </section>
 
       <section class="aboutPreview">
-        <div class="aboutPreviewImage">
-          <img src="/assets/img/about/about-preview.jpg" alt="" />
-        </div>
-
         <div class="aboutPreviewContent">
           <h2 class="aboutPreviewLabel">ABOUT US</h2>
 
@@ -177,12 +198,16 @@
 
           <a href="/contact.html" class="textLink">CONTACT US</a>
         </div>
+
+        <div class="contactImg visual">
+          <img src="/assets/img/contact.jpg" alt="" />
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <nav class="nav">
-        <ul class="navList">
+      <nav class="footerNav">
+        <ul class="footerNavList">
           <li>
             <a href="/about.html">ABOUT</a>
           </li>
