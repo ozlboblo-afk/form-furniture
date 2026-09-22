@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- ==== Basic ==== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ==== SEO ==== -->
+    <title>FORM｜FURNITURE</title>
+    <meta name="description" content="サイトの説明文。" />
+
+    <!-- ==== OGP ==== -->
+    <meta property="og:title" content="FORM｜FURNITURE" />
+    <meta property="og:description" content="サイトの説明文。" />
+    <meta
+      property="og:image"
+      content="https://example.com/assets/img/ogp.png"
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- ==== Icons ==== -->
+    <link rel="icon" href="/assets/icon/favicon.svg" type="image/svg+xml" />
+
+    <!-- ==== CSS ==== -->
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/index.html" class="logo">FORM / FURNITURE</a>
+
+      <button
+        class="drawerButton"
+        aria-label="メニュー"
+        aria-expanded="false"
+        aria-controls="headerMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="headerNav" id="headerMenu">
+        <ul class="headerNavList">
+          <li>
+            <a href="/about.html">ABOUT</a>
+          </li>
+
+          <li>
+            <a href="/product.html">PRODUCT</a>
+          </li>
+
+          <li>
+            <a href="/contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="drawerOverlay"></div>
+
+    <main class="product">
+      <!-- Hero -->
+      <section class="pageHero">
+        <div class="pageHeroContent">
+          <p class="pageHeroMeta">— COLLECTION</p>
+
+          <h1 class="pageHeroTitle">PRODUCT</h1>
+
+          <p class="pageHeroLead">
+            暮らしを彩る、
+            <br />
+            選びたくなる家具たち。
+          </p>
+
+          <span class="pageHeroCount">29 ITEMS</span>
+        </div>
+      </section>
+
+      <!-- Product List -->
+      <section class="productList">
+        <div class="productFilter">
+          <button
+            type="button"
+            class="productFilterButton is-active"
+            data-filter="all"
+          >
+            ALL
+          </button>
+
+          <button type="button" class="productFilterButton" data-filter="chair">
+            CHAIR
+          </button>
+
+          <button type="button" class="productFilterButton" data-filter="table">
+            TABLE
+          </button>
+
+          <button type="button" class="productFilterButton" data-filter="sofa">
+            SOFA
+          </button>
+
+          <button
+            type="button"
+            class="productFilterButton"
+            data-filter="storage"
+          >
+            STORAGE
+          </button>
+        </div>
+
+        <div class="productGrid"></div>
+
+        <dialog class="detailPanel" id="detailPanel">
+          <div class="detailPanelInner">
+            <button
+              type="button"
+              class="detailPanelClose"
+              aria-label="閉じる"
+              autofocus
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="detailPanelImg visual">
+              <img src="" alt="" />
+            </div>
+
+            <div class="detailPanelContent">
+              <div class="detailPanelHeader">
+                <span class="detailPanelNumber"></span>
+
+                <h2 class="detailPanelName"></h2>
+
+                <p class="detailPanelPrice"></p>
+              </div>
+
+              <dl class="detailPanelInfo">
+                <div class="detailPanelInfoItem">
+                  <dt>SIZE</dt>
+                  <dd class="detailPanelSize"></dd>
+                </div>
+
+                <div class="detailPanelInfoItem">
+                  <dt>MATERIAL</dt>
+                  <dd class="detailPanelMaterial"></dd>
+                </div>
+
+                <div class="detailPanelInfoItem">
+                  <dt>COLOR</dt>
+                  <dd class="detailPanelColor"></dd>
+                </div>
+              </dl>
+
+              <div class="detailPanelDescription">
+                <h3>DESCRIPTION</h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footerNav">
+        <ul class="footerNavList">
+          <li>
+            <a href="/about.html">ABOUT</a>
+          </li>
+
+          <li>
+            <a href="/product.html">PRODUCT</a>
+          </li>
+
+          <li>
+            <a href="/contact.html">CONTACT</a>
+          </li>
+
+          <li>
+            <a href="/privacypolicy.html">PRIVACY POLICY</a>
+          </li>
+
+          <li>
+            <a href="/legal.html">LEGAL</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="socialList">
+        <li>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <img src="/assets/icon/instagram.svg" alt="" />
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <img src="/assets/icon/facebook.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+
+      <small class="copyright">© FORM / FURNITURE</small>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/products.js"></script>
+    <script src="/js/product.js"></script>
+  </body>
+</html>

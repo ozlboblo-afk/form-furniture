@@ -4,6 +4,7 @@
 
 .aboutHero {
   position: relative;
+  min-height: 70svh;
 }
 
 .aboutHeroImg {
@@ -14,18 +15,30 @@
 }
 
 .aboutHeroContent {
+  display: flex;
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: var(--space-3xl) var(--content-padding);
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 80%;
+  padding: var(--space-4xl) var(--content-padding);
+
+  background: rgb(20 20 20 / 18%);
+
   color: var(--color-text-inverse);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  border-right: 1px solid rgb(255 255 255 / 15%);
 }
 
 .aboutHeroTitle {
   margin-bottom: var(--space-lg);
+
   font-size: var(--fs-xxl);
-  font-weight: 400;
   font-family: var(--ff-en);
   line-height: var(--lh-none);
   letter-spacing: -0.03em;
@@ -41,37 +54,57 @@
 ========================= */
 
 .brandStory {
-  padding-block: var(--section-space);
-}
-
-.brandStory .sectionHeader {
+  display: grid;
+  gap: var(--space-2xl);
   padding-inline: var(--content-padding);
+  padding-block: var(--section-space);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "content"
+    "image01";
 }
 
 .brandStoryContent {
   display: grid;
-  gap: var(--space-3xl);
-  padding-inline: var(--content-padding);
-}
-
-.brandStoryText {
-  display: grid;
   gap: var(--space-xl);
+  max-width: var(--content-md);
+  grid-area: content;
 }
 
-.brandStoryText p {
+.brandStoryContent p {
   line-height: var(--lh-relaxed);
 }
 
-.brandStoryText p:first-child {
-  font-size: var(--fs-md);
+.brandStoryContent p:nth-of-type(1) {
+  font-size: var(--fs-lg);
   line-height: var(--lh-tight);
 }
 
+.brandStoryContent p:last-child {
+  max-width: 42rem;
+  margin-left: auto;
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
 .brandStoryImg {
-  width: 100%;
-  background-color: #627a45;
-  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.brandStoryImg01 {
+  max-width: 42rem;
+  margin-left: auto;
+  grid-area: image01;
+  aspect-ratio: 3 / 2;
+}
+
+.brandStoryImg02,
+.brandStoryImg03 {
+  display: none;
+}
+
+.brandStoryImg img {
+  display: block;
 }
 
 /* =========================
@@ -80,22 +113,21 @@
 
 .concept {
   display: grid;
-  gap: var(--space-3xl);
-  padding-block: var(--section-space);
-  background: var(--color-bg-inverse);
+  background: var(--color-primary);
   color: var(--color-text-inverse);
+  grid-template-columns: 1fr;
 }
 
 .conceptContent {
-  padding-inline: var(--content-padding);
+  padding: var(--section-space) var(--content-padding);
 }
 
 .concept .sectionHeader {
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .conceptTitle {
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
   font-size: var(--fs-lg);
   line-height: var(--lh-tight);
 }
@@ -108,7 +140,7 @@
 .conceptItem {
   display: grid;
   padding-top: var(--space-lg);
-  grid-template-columns: 4rem 1fr;
+  grid-template-columns: 3rem 1fr;
   column-gap: var(--space-md);
   row-gap: var(--space-xs);
   border-top: 1px solid rgb(255 255 255 / 30%);
@@ -134,8 +166,14 @@
 
 .conceptImg {
   width: 100%;
-  background-color: #627a45;
   aspect-ratio: 4 / 3;
+}
+
+.conceptImg img {
+  width: 100%;
+  height: 100%;
+  background-color: #627a45;
+  object-fit: cover;
 }
 
 /* =========================
@@ -146,48 +184,63 @@
   padding-block: var(--section-space);
 }
 
-.material .sectionHeader,
-.materialLead {
+.material .sectionHeader {
   padding-inline: var(--content-padding);
 }
 
 .materialLead {
   max-width: var(--content-md);
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-4xl);
+  padding-inline: var(--content-padding);
+
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
 }
 
 .materialList {
   display: grid;
-  gap: var(--space-3xl);
-  padding-inline: var(--content-padding);
+  gap: var(--space-4xl);
 }
 
 .materialItem {
   display: grid;
-  gap: var(--space-lg);
-  grid-template-columns: auto 1fr;
+  position: relative;
+  align-items: center;
+
+  grid-template-columns: 2.2fr 1fr;
+}
+
+.materialImg {
+  width: 100%;
+  background-color: #627a45;
+  grid-column: 1;
+  grid-row: 1;
+  aspect-ratio: 16 / 6;
 }
 
 .materialNumber {
-  padding-top: 0.4rem;
-  font-size: var(--fs-xs);
+  position: absolute;
+  top: 50%;
+  left: var(--space-md);
+  z-index: 1;
+  transform: translateY(-50%);
+  font-size: var(--fs-display);
   font-family: var(--ff-en);
-  color: var(--color-text-muted);
+  line-height: var(--lh-none);
+  color: var(--color-text-inverse);
 }
 
 .materialName {
   display: grid;
   gap: var(--space-xs);
+  padding-inline: var(--space-lg);
 }
 
 .materialNameEn {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
   font-weight: 400;
   font-family: var(--ff-en);
   line-height: var(--lh-none);
-  letter-spacing: -0.02em;
 }
 
 .materialNameJa {
@@ -195,11 +248,21 @@
   color: var(--color-text-secondary);
 }
 
-.materialImg {
-  width: 100%;
-  background-color: #627a45;
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 9;
+.materialItem:nth-child(even) {
+  grid-template-columns: 1fr 2.2fr;
+}
+
+.materialItem:nth-child(even) .materialImg {
+  grid-column: 2;
+}
+
+.materialItem:nth-child(even) .materialName {
+  grid-column: 1;
+}
+
+.materialItem:nth-child(even) .materialNumber {
+  right: var(--space-md);
+  left: auto;
 }
 
 /* =========================
@@ -207,14 +270,30 @@
 ========================= */
 
 .brandPhilosophy {
-  padding-block: var(--section-space);
-  background: var(--color-bg-subtle);
+  position: relative;
+
+  min-height: 70svh;
+
+  background-image:
+    linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
+    url("/assets/img/aboutPhilosophy.jpg");
+  background-size: cover;
+
+  background-position: center;
+
+  color: var(--color-text-inverse);
 }
 
 .brandPhilosophyContent {
   display: grid;
+  position: relative;
+  z-index: 1;
+
+  align-content: end;
   gap: var(--space-3xl);
-  padding-inline: var(--content-padding);
+
+  min-height: 70svh;
+  padding: var(--space-4xl) var(--content-padding);
 }
 
 .brandPhilosophyTitle {
@@ -224,6 +303,7 @@
 
 .brandPhilosophyText {
   max-width: var(--content-md);
+
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
 }
@@ -233,9 +313,7 @@
 ========================= */
 
 @media (width >= 768px) {
-  /* =========================
-     01. About Hero
-  ========================= */
+  /* About Hero */
 
   .aboutHero {
     min-height: calc(100svh - 8rem);
@@ -247,79 +325,89 @@
   }
 
   .aboutHeroContent {
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+
+    justify-content: flex-end;
+
+    width: 36%;
     padding: var(--space-4xl) var(--content-padding);
   }
 
   .aboutHeroTitle {
-    margin-bottom: var(--space-xl);
     font-size: var(--fs-display);
   }
 
-  /* =========================
-     02. Brand Story
-  ========================= */
+  /* Brand Story */
+
+  .brandStory {
+    gap: 0;
+    padding-inline: 0;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 60rem 28rem;
+    grid-template-areas:
+      "content image01 "
+      "image02 image03";
+  }
 
   .brandStoryContent {
-    align-items: center;
-    gap: var(--space-4xl);
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  }
-
-  .brandStoryText {
-    gap: var(--space-2xl);
-  }
-
-  .brandStoryText p:first-child {
-    font-size: var(--fs-lg);
+    padding: var(--space-4xl) clamp(4rem, 5vw, 8rem);
+    align-self: center;
   }
 
   .brandStoryImg {
-    aspect-ratio: 4 / 3;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
-  /* =========================
-     03. Concept
-  ========================= */
+  .brandStoryImg01 {
+    max-width: none;
+    aspect-ratio: auto;
+  }
+
+  /* Concept */
 
   .concept {
-    align-items: stretch;
-    gap: 0;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    min-height: 48rem;
+    grid-template-columns: 3fr 1fr;
   }
 
   .conceptContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-block: var(--space-4xl);
+    padding: var(--space-4xl) var(--content-padding);
   }
 
   .concept .sectionHeader {
-    margin-bottom: var(--space-4xl);
+    margin-bottom: var(--space-xl);
   }
 
   .conceptTitle {
-    margin-bottom: var(--space-4xl);
-    font-size: var(--fs-xl);
+    margin-bottom: var(--space-2xl);
+    font-size: var(--fs-base);
   }
 
   .conceptList {
-    gap: 0;
+    gap: var(--space-xl);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .conceptItem {
-    align-items: start;
-    padding-block: var(--space-lg);
-    grid-template-columns: 5rem 8rem 1fr;
-    column-gap: var(--space-lg);
+    display: block;
+    padding-top: var(--space-md);
   }
 
   .conceptNumber {
-    grid-row: auto;
+    display: block;
+    margin-bottom: var(--space-xs);
   }
 
   .conceptName {
-    font-size: var(--fs-base);
+    margin-bottom: var(--space-xs);
   }
 
   .conceptText {
@@ -327,61 +415,30 @@
   }
 
   .conceptImg {
+    width: 100%;
     height: 100%;
-    min-height: 64rem;
     aspect-ratio: auto;
   }
 
-  /* =========================
-     04. Material / Craftsmanship
-  ========================= */
+  /* 04. Material / Craftsmanship */
 
-  .materialLead {
-    margin-bottom: var(--space-4xl);
-  }
-
-  .materialList {
-    gap: var(--space-4xl);
-    padding-inline: 0;
-  }
-
-  .materialItem {
-    position: relative;
-    gap: var(--space-xl);
-    padding-inline: var(--content-padding);
-    grid-template-columns: 8rem 1fr;
-  }
-
-  .materialNumber {
-    padding-top: 0.8rem;
-  }
-
-  .materialName {
-    align-self: center;
+  .materialImg {
+    aspect-ratio: 16 / 4;
   }
 
   .materialNameEn {
     font-size: var(--fs-xl);
   }
 
-  .materialNameJa {
-    font-size: var(--fs-sm);
-  }
+  /* 05. Brand Philosophy */
 
-  .materialImg {
-    width: min(100%, 100rem);
-    grid-column: 2;
-    aspect-ratio: 16 / 7;
+  .brandPhilosophy {
+    min-height: 80svh;
   }
-
-  /* =========================
-     05. Brand Philosophy
-  ========================= */
 
   .brandPhilosophyContent {
-    align-items: end;
-    gap: var(--space-4xl);
-    grid-template-columns: 1fr 1.5fr;
+    max-width: 100rem;
+    min-height: 80svh;
   }
 
   .brandPhilosophyTitle {

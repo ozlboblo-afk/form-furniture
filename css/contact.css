@@ -1,0 +1,104 @@
+/* =========================
+   01. Contact Form
+========================= */
+
+.contactForm {
+  padding-block: var(--section-space);
+}
+
+.contactFormInner {
+  max-width: var(--content-lg);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+}
+
+.contactFormHeader {
+  margin-bottom: var(--space-2xl);
+}
+
+.contactFormLead {
+  margin-top: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.contactFormBody {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.formField {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.formField label {
+  font-size: var(--fs-xs);
+}
+
+.formField input,
+.formField textarea {
+  width: 100%;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border-default);
+  border-radius: 0;
+  background: var(--color-bg-default);
+  font: inherit;
+  font-size: var(--fs-sm);
+  color: var(--color-text-primary);
+}
+
+.formField textarea {
+  min-height: 16rem;
+  resize: vertical;
+}
+
+.formField input::placeholder,
+.formField textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.formField input:focus,
+.formField textarea:focus {
+  outline: none;
+  border-color: var(--color-text-primary);
+}
+
+.formSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  min-height: 5rem;
+  margin-top: var(--space-md);
+  border: 0;
+  background: var(--color-bg-inverse);
+  font-size: var(--fs-xs);
+  color: var(--color-text-inverse);
+  cursor: pointer;
+}
+
+.formSubmit span {
+  transition: transform var(--transition-base);
+}
+
+.formSubmit:hover span {
+  transform: translateX(6px);
+}
+
+@media (width >= 768px) {
+  .contactFormInner {
+    display: grid;
+    gap: var(--space-4xl);
+    grid-template-columns: 24rem 1fr;
+  }
+
+  .contactFormHeader {
+    align-self: start;
+  }
+
+  .contactFormBody {
+    grid-column: 2;
+  }
+}

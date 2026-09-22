@@ -85,7 +85,7 @@
 
         <ul class="categoryList">
           <li>
-            <a href="/product.html" class="categoryCard visual">
+            <a href="/product.html?category=chair" class="categoryCard visual">
               <img src="/assets/img/categoryChair.jpg" alt="" />
 
               <div class="categoryInfo">
@@ -96,7 +96,7 @@
           </li>
 
           <li>
-            <a href="/product.html" class="categoryCard visual">
+            <a href="/product.html?category=table" class="categoryCard visual">
               <img src="/assets/img/categoryTable.jpg" alt="" />
 
               <div class="categoryInfo">
@@ -107,7 +107,7 @@
           </li>
 
           <li>
-            <a href="/product.html" class="categoryCard visual">
+            <a href="/product.html?category=sofa" class="categoryCard visual">
               <img src="/assets/img/categorySofa.jpg" alt="" />
 
               <div class="categoryInfo">
@@ -118,7 +118,10 @@
           </li>
 
           <li>
-            <a href="/product.html" class="categoryCard visual">
+            <a
+              href="/product.html?category=storage"
+              class="categoryCard visual"
+            >
               <img src="/assets/img/categoryStorage.jpg" alt="" />
 
               <div class="categoryInfo">
@@ -135,41 +138,7 @@
           <h2>PICK UP</h2>
         </div>
 
-        <article class="pickupContent">
-          <div class="pickupImg visual">
-            <img src="/assets/img/pickup.jpg" alt="WOOD CHAIR" />
-          </div>
-
-          <div class="pickupInfo">
-            <h3 class="pickupName">WOOD CHAIR</h3>
-
-            <p class="pickupDescription">
-              暮らしに自然となじむ、シンプルなチェア。
-              無垢材ならではのやわらかな質感と、すっきりとした
-              フォルムが、ダイニングやワークスペースに落ち着いた
-              心地よさをもたらします。
-            </p>
-
-            <dl class="pickupSpecs">
-              <div>
-                <dt>Material</dt>
-                <dd>Oak</dd>
-              </div>
-
-              <div>
-                <dt>Color</dt>
-                <dd>Natural</dd>
-              </div>
-            </dl>
-
-            <p class="pickupPrice">
-              <span class="pickupPriceLabel">Price</span>
-              <span class="pickupPriceValue">¥48,000</span>
-            </p>
-
-            <a href="/product.html" class="textLink">VIEW PRODUCT</a>
-          </div>
-        </article>
+        <div class="pickupList"></div>
       </section>
 
       <section class="aboutPreview">
@@ -238,7 +207,7 @@
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <img src="/assets/img/icon/instagram.svg" alt="" />
+            <img src="/assets/icon/instagram.svg" alt="" />
           </a>
         </li>
 
@@ -249,7 +218,7 @@
             rel="noopener noreferrer"
             aria-label="Facebook"
           >
-            <img src="/assets/img/icon/facebook.svg" alt="" />
+            <img src="/assets/icon/facebook.svg" alt="" />
           </a>
         </li>
       </ul>
@@ -258,5 +227,7 @@
     </footer>
 
     <script src="/js/common.js"></script>
+    <script src="/js/products.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>

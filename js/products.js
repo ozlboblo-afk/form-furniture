@@ -1,0 +1,361 @@
+/* =========================
+   Product Data
+========================= */
+
+const products = [
+  {
+    id: "01",
+    category: "chair",
+    name: "Lounge Chair",
+    price: "¥45,000",
+    image: "/assets/img/product/product01.jpg",
+    size: "W600 × D650 × H780mm",
+    material: "Oak / Fabric",
+    color: "Natural",
+    description:
+      "素材の表情を活かし、ゆったりとした時間を過ごせるラウンジチェア。",
+  },
+
+  {
+    id: "02",
+    category: "storage",
+    name: "Low Cabinet",
+    price: "¥88,000",
+    image: "/assets/img/product/product02.jpg",
+    size: "W1200 × D420 × H700mm",
+    material: "Oak",
+    color: "Natural",
+    description: "空間に自然と馴染む、シンプルなフォルムのローキャビネット。",
+  },
+
+  {
+    id: "03",
+    category: "table",
+    name: "Round Table",
+    price: "¥98,000",
+    image: "/assets/img/product/product03.jpg",
+    size: "W1100 × D1100 × H720mm",
+    material: "Oak / Steel",
+    color: "Natural",
+    description: "日々の食事や会話を囲む、軽やかな印象のラウンドテーブル。",
+  },
+
+  {
+    id: "04",
+    category: "sofa",
+    name: "Soft Sofa",
+    price: "¥128,000",
+    image: "/assets/img/product/product04.jpg",
+    size: "W1800 × D850 × H780mm",
+    material: "Fabric / Oak",
+    color: "Green",
+    description: "深い座り心地と柔らかな表情を持つ、暮らしに寄り添うソファ。",
+  },
+
+  {
+    id: "05",
+    category: "storage",
+    name: "Sideboard",
+    price: "¥105,000",
+    image: "/assets/img/product/product05.jpg",
+    size: "W1400 × D420 × H760mm",
+    material: "Oak",
+    color: "Natural",
+    description: "収納としての機能と家具としての美しさを両立したサイドボード。",
+  },
+
+  {
+    id: "06",
+    category: "chair",
+    name: "Dining Chair",
+    price: "¥42,000",
+    image: "/assets/img/product/product06.jpg",
+    size: "W500 × D520 × H780mm",
+    material: "Oak / Fabric",
+    color: "Gray",
+    description:
+      "シンプルなフォルムと心地よい座り心地を両立したダイニングチェア。",
+  },
+
+  {
+    id: "07",
+    category: "sofa",
+    name: "Lounge Sofa",
+    price: "¥138,000",
+    image: "/assets/img/product/product07.jpg",
+    size: "W1900 × D900 × H800mm",
+    material: "Fabric / Oak",
+    color: "Beige",
+    description: "柔らかなファブリックと落ち着いた色合いで空間を整えるソファ。",
+  },
+
+  {
+    id: "08",
+    category: "table",
+    name: "Dining Table",
+    price: "¥112,000",
+    image: "/assets/img/product/product08.jpg",
+    size: "W1600 × D800 × H720mm",
+    material: "Oak / Steel",
+    color: "Natural",
+    description:
+      "素材の質感を楽しみながら、日々の食卓を支えるダイニングテーブル。",
+  },
+
+  {
+    id: "09",
+    category: "chair",
+    name: "Dining Chair",
+    price: "¥46,000",
+    image: "/assets/img/product/product09.jpg",
+    size: "W520 × D540 × H800mm",
+    material: "Oak / Fabric",
+    color: "Orange",
+    description: "空間のアクセントにもなる、温かみのあるダイニングチェア。",
+  },
+
+  {
+    id: "10",
+    category: "storage",
+    name: "Sideboard",
+    price: "¥118,000",
+    image: "/assets/img/product/product10.jpg",
+    size: "W1500 × D430 × H760mm",
+    material: "Oak / Marble",
+    color: "White / Natural",
+    description:
+      "異なる素材のコントラストを楽しめる、収納力のあるサイドボード。",
+  },
+
+  {
+    id: "11",
+    category: "chair",
+    name: "Dining Chair",
+    price: "¥48,000",
+    image: "/assets/img/product/product11.jpg",
+    size: "W520 × D540 × H790mm",
+    material: "Rattan / Oak",
+    color: "Natural",
+    description: "天然素材の表情を活かした、軽やかな印象のチェア。",
+  },
+
+  {
+    id: "12",
+    category: "table",
+    name: "Side Table",
+    price: "¥52,000",
+    image: "/assets/img/product/product12.jpg",
+    size: "W500 × D500 × H520mm",
+    material: "Oak",
+    color: "Brown",
+    description:
+      "ソファの横やベッドサイドに置きやすいコンパクトなサイドテーブル。",
+  },
+
+  {
+    id: "13",
+    category: "chair",
+    name: "Dining Chair",
+    price: "¥44,000",
+    image: "/assets/img/product/product13.jpg",
+    size: "W500 × D520 × H780mm",
+    material: "Oak / Fabric",
+    color: "Blue",
+    description: "空間に軽やかな彩りを添える、シンプルなダイニングチェア。",
+  },
+
+  {
+    id: "14",
+    category: "table",
+    name: "Dining Table",
+    price: "¥120,000",
+    image: "/assets/img/product/product14.jpg",
+    size: "W1600 × D800 × H720mm",
+    material: "Oak / Steel",
+    color: "Natural",
+    description:
+      "素材の存在感を楽しめる、落ち着いた佇まいのダイニングテーブル。",
+  },
+
+  {
+    id: "15",
+    category: "sofa",
+    name: "Classic Sofa",
+    price: "¥148,000",
+    image: "/assets/img/product/product15.jpg",
+    size: "W1900 × D850 × H820mm",
+    material: "Leather / Oak",
+    color: "Brown",
+    description: "クラシックな佇まいと現代的な使いやすさを備えたソファ。",
+  },
+
+  {
+    id: "16",
+    category: "chair",
+    name: "Wood Chair",
+    price: "¥42,000",
+    image: "/assets/img/product/product16.jpg",
+    size: "W480 × D520 × H780mm",
+    material: "Oak",
+    color: "Natural",
+    description: "木の質感をそのまま楽しめる、軽やかなフォルムのチェア。",
+  },
+
+  {
+    id: "17",
+    category: "storage",
+    name: "Sideboard",
+    price: "¥125,000",
+    image: "/assets/img/product/product17.jpg",
+    size: "W1600 × D450 × H760mm",
+    material: "Oak",
+    color: "Natural",
+    description: "暮らしの道具をすっきりと収める、端正なサイドボード。",
+  },
+
+  {
+    id: "18",
+    category: "table",
+    name: "Round Table",
+    price: "¥108,000",
+    image: "/assets/img/product/product18.jpg",
+    size: "W1200 × D1200 × H720mm",
+    material: "Oak",
+    color: "Brown",
+    description: "木の温かみを感じられる、日常使いに適したラウンドテーブル。",
+  },
+
+  {
+    id: "19",
+    category: "storage",
+    name: "Cabinet",
+    price: "¥98,000",
+    image: "/assets/img/product/product19.jpg",
+    size: "W1200 × D420 × H800mm",
+    material: "Oak",
+    color: "Natural",
+    description: "必要なものを美しく収める、シンプルなキャビネット。",
+  },
+
+  {
+    id: "20",
+    category: "sofa",
+    name: "Lounge Sofa",
+    price: "¥135,000",
+    image: "/assets/img/product/product20.jpg",
+    size: "W1900 × D880 × H800mm",
+    material: "Fabric / Oak",
+    color: "Gray",
+    description: "落ち着いた色合いとゆったりとした座面を持つラウンジソファ。",
+  },
+
+  {
+    id: "21",
+    category: "sofa",
+    name: "Three Seat Sofa",
+    price: "¥142,000",
+    image: "/assets/img/product/product21.jpg",
+    size: "W2000 × D880 × H800mm",
+    material: "Fabric / Oak",
+    color: "Gray",
+    description: "シンプルなデザインで、さまざまな空間に馴染む3人掛けソファ。",
+  },
+
+  {
+    id: "22",
+    category: "chair",
+    name: "Director Chair",
+    price: "¥38,000",
+    image: "/assets/img/product/product22.jpg",
+    size: "W580 × D500 × H820mm",
+    material: "Oak / Fabric",
+    color: "Black",
+    description: "軽快な構造と存在感のあるフォルムを持つディレクターズチェア。",
+  },
+
+  {
+    id: "23",
+    category: "sofa",
+    name: "Modern Sofa",
+    price: "¥158,000",
+    image: "/assets/img/product/product23.jpg",
+    size: "W2000 × D900 × H800mm",
+    material: "Fabric / Oak",
+    color: "Gray",
+    description: "すっきりとしたシルエットで、現代的な空間に馴染むソファ。",
+  },
+
+  {
+    id: "24",
+    category: "table",
+    name: "Coffee Table",
+    price: "¥72,000",
+    image: "/assets/img/product/product24.jpg",
+    size: "W1200 × D600 × H400mm",
+    material: "Oak / Steel",
+    color: "Natural",
+    description: "木の素材感を活かした、リビングに合わせやすいローテーブル。",
+  },
+
+  {
+    id: "25",
+    category: "sofa",
+    name: "Leather Sofa",
+    price: "¥165,000",
+    image: "/assets/img/product/product25.jpg",
+    size: "W2000 × D900 × H800mm",
+    material: "Leather / Oak",
+    color: "Orange",
+    description: "深みのあるレザーと柔らかなフォルムを組み合わせたソファ。",
+  },
+
+  {
+    id: "26",
+    category: "chair",
+    name: "Lounge Chair",
+    price: "¥58,000",
+    image: "/assets/img/product/product26.jpg",
+    size: "W650 × D700 × H780mm",
+    material: "Oak / Leather",
+    color: "White",
+    description: "植物や光のある空間にも馴染む、軽やかなラウンジチェア。",
+  },
+
+  {
+    id: "27",
+    category: "table",
+    name: "Wood Table",
+    price: "¥128,000",
+    image: "/assets/img/product/product27.jpg",
+    size: "W1800 × D850 × H720mm",
+    material: "Walnut / Steel",
+    color: "Brown",
+    description: "木の表情を大胆に楽しめる、存在感のあるダイニングテーブル。",
+  },
+
+  {
+    id: "28",
+    category: "storage",
+    name: "Cabinet",
+    price: "¥112,000",
+    image: "/assets/img/product/product28.jpg",
+    size: "W1200 × D450 × H800mm",
+    material: "Oak",
+    color: "Natural",
+    description:
+      "収納としての機能性と、家具としての美しさを兼ね備えたキャビネット。",
+  },
+
+  {
+    id: "29",
+    category: "storage",
+    name: "Storage Cabinet",
+    price: "¥118,000",
+    image: "/assets/img/product/product29.jpg",
+    size: "W1400 × D450 × H800mm",
+    material: "Oak",
+    color: "Natural",
+    description:
+      "暮らしの道具をすっきりと収める、シンプルなストレージキャビネット。",
+  },
+];

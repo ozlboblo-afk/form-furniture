@@ -126,81 +126,117 @@
 
 .pickup {
   padding-bottom: var(--section-space);
+}
+
+.pickup .sectionHeader {
   padding-inline: var(--content-padding);
 }
 
-.pickupContent {
+.pickupList {
   display: grid;
-  gap: var(--space-xl);
+  position: relative;
+}
+
+.pickupItem {
+  display: grid;
+  transform: translateY(1.6rem);
+  gap: var(--space-lg);
+  padding-inline: var(--content-padding);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0s linear 0.5s;
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+
+.pickupItem.is-active {
+  transform: translateY(0);
+  opacity: 1;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0s linear 0s;
+  visibility: visible;
 }
 
 .pickupImg {
+  width: 100%;
+  overflow: hidden;
   aspect-ratio: 4 / 3;
+}
+
+.pickupImg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pickupInfo {
   display: grid;
-  gap: var(--space-lg);
+  grid-template-columns: 3rem 1fr;
+  column-gap: var(--space-md);
+  row-gap: var(--space-md);
+}
+
+.pickupNumber {
+  font-size: var(--fs-xs);
+  font-family: var(--ff-en);
+  color: var(--color-text-muted);
+}
+
+.pickupDetails {
+  display: grid;
+  gap: var(--space-xs);
 }
 
 .pickupName {
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: 400;
 }
 
 .pickupDescription {
-  max-width: 40rem;
-
-  font-size: var(--fs-sm);
-  line-height: var(--lh-relaxed);
-}
-
-.pickupSpecs {
-  display: grid;
-  gap: var(--space-sm);
-  padding-block: var(--space-md);
-
-  border-block: 1px solid var(--color-border-default);
-}
-
-.pickupSpecs div {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-md);
-}
-
-.pickupSpecs dt,
-.pickupSpecs dd {
   font-size: var(--fs-xs);
-}
-
-.pickupSpecs dt {
-  font-family: var(--ff-en);
-  letter-spacing: 0.04em;
+  line-height: var(--lh-relaxed);
   color: var(--color-text-secondary);
 }
 
 .pickupPrice {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--space-md);
-}
-
-.pickupPriceLabel {
-  font-size: var(--fs-xs);
-  font-family: var(--ff-en);
-  letter-spacing: 0.04em;
-  color: var(--color-text-secondary);
-}
-
-.pickupPriceValue {
+  margin-top: var(--space-xs);
   font-size: var(--fs-sm);
   font-family: var(--ff-en);
 }
 
-.pickupInfo .textLink {
+.pickupView {
   margin-top: var(--space-sm);
+  font-size: var(--fs-xs);
+  grid-column: 2;
+}
+
+.pickupDots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-xl);
+}
+
+.pickupDot {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--gray-300);
+  cursor: pointer;
+}
+
+.pickupDot.is-active {
+  background: var(--color-text-primary);
 }
 
 /* =========================
@@ -269,8 +305,6 @@
 
 .contactCta {
   display: grid;
-  gap: var(--space-3xl);
-  padding-block: var(--section-space);
 
   background: var(--color-bg-accent);
   color: var(--color-text-inverse);
@@ -281,6 +315,7 @@
   gap: var(--space-2xl);
 
   padding-inline: var(--content-padding);
+  padding-block: var(--section-space);
 }
 
 .contactCtaLabel {
@@ -371,10 +406,59 @@
 
   /* Pick Up */
 
-  .pickupContent {
+  .pickup {
+    padding-inline: var(--content-padding);
+  }
+
+  .pickup .sectionHeader {
+    padding-inline: 0;
+  }
+
+  .pickupItem {
     align-items: center;
-    gap: var(--space-4xl);
-    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-2xl);
+    padding-inline: 0;
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .pickupImg {
+    aspect-ratio: 4 / 3;
+  }
+
+  .pickupInfo {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    column-gap: var(--space-lg);
+    row-gap: var(--space-xl);
+  }
+
+  .pickupDetails {
+    align-self: center;
+  }
+
+  .pickupName {
+    font-size: var(--fs-base);
+  }
+
+  .pickupDescription {
+    max-width: 40rem;
+    margin-top: var(--space-xs);
+  }
+
+  .pickupPrice {
+    margin-top: var(--space-sm);
+  }
+
+  .pickupView {
+    width: 100%;
+    margin-top: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    grid-column: 2;
+    border-bottom: 1px solid var(--color-border-default);
+  }
+
+  .pickupDots {
+    margin-top: var(--space-xl);
   }
 
   /* Contact CTA */
@@ -386,7 +470,6 @@
 
   .contactCtaContent {
     align-content: center;
-    padding-block: var(--space-4xl);
   }
 
   .contactImg {

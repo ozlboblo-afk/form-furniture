@@ -337,7 +337,6 @@ img {
 
   padding: 10rem var(--content-padding) var(--space-3xl);
 
-  /* -------------------------------------------------------色変える */
   background: var(--color-bg-subtle);
 
   opacity: 0;
@@ -387,68 +386,11 @@ img {
   visibility: visible;
 }
 
-/* =========================
-   Section Header
-========================= */
-
-.sectionHeader {
-  margin-bottom: var(--space-xl);
+/* Body固定 */
+body.is-fixed {
+  overflow: hidden;
 }
 
-.sectionHeader h2 {
-  font-size: var(--fs-md);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-}
-
-/* =========================
-    Footer
-========================= */
-
-.footer {
-  display: grid;
-  gap: var(--space-xl);
-
-  padding: var(--space-xl) var(--content-padding);
-}
-
-.footerNavList {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-sm) var(--space-lg);
-}
-
-.footerNavList a {
-  font-size: var(--fs-xs);
-  font-family: var(--ff-en);
-  letter-spacing: 0.04em;
-}
-
-.socialList {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.socialList a {
-  display: block;
-  width: 2rem;
-}
-
-.socialList img {
-  width: 100%;
-  height: auto;
-}
-
-.copyright {
-  font-size: var(--fs-xs);
-  font-family: var(--ff-en);
-  color: var(--color-text-muted);
-}
-
-/* =========================
-   09. PC
-========================= */
 @media (width >= 768px) {
   /* Header */
 
@@ -508,7 +450,134 @@ img {
   .headerNavList a:hover {
     opacity: 0.5;
   }
+}
 
+/* =========================
+   Section Header
+========================= */
+
+.sectionHeader {
+  margin-bottom: var(--space-xl);
+}
+
+.sectionHeader h2 {
+  font-size: var(--fs-md);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* =========================
+   Page Hero
+========================= */
+
+.pageHero {
+  padding-block: var(--space-4xl);
+  background: var(--color-bg-default);
+}
+
+.pageHeroContent {
+  display: grid;
+  align-content: end;
+  min-height: 42rem;
+  padding-inline: var(--content-padding);
+}
+
+.pageHeroMeta {
+  margin-bottom: var(--space-2xl);
+  font-size: var(--fs-xs);
+  font-family: var(--ff-en);
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+}
+
+.pageHeroTitle {
+  margin-bottom: var(--space-xl);
+  font-size: var(--fs-xxl);
+  font-weight: 400;
+  font-family: var(--ff-en);
+  line-height: var(--lh-none);
+  letter-spacing: -0.03em;
+}
+
+.pageHeroLead {
+  margin-bottom: var(--space-2xl);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+}
+
+.pageHeroCount {
+  width: fit-content;
+  padding-top: var(--space-md);
+  font-size: var(--fs-xs);
+  font-family: var(--ff-en);
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+@media (width >= 768px) {
+  .pageHero {
+    padding-block: 0;
+  }
+
+  .pageHeroContent {
+    max-width: var(--content-xl);
+    min-height: 48rem;
+    margin-inline: auto;
+    padding-block: var(--space-4xl);
+  }
+
+  .pageHeroTitle {
+    font-size: var(--fs-display);
+  }
+}
+
+/* =========================
+    Footer
+========================= */
+
+.footer {
+  display: grid;
+  gap: var(--space-xl);
+
+  padding: var(--space-xl) var(--content-padding);
+}
+
+.footerNavList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.footerNavList a {
+  font-size: var(--fs-xs);
+  font-family: var(--ff-en);
+  letter-spacing: 0.04em;
+}
+
+.socialList {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.socialList a {
+  display: block;
+  width: 2rem;
+}
+
+.socialList img {
+  width: 100%;
+  height: auto;
+}
+
+.copyright {
+  font-size: var(--fs-xs);
+  font-family: var(--ff-en);
+  color: var(--color-text-muted);
+}
+
+@media (width >= 768px) {
   /* Footer */
 
   .footer {

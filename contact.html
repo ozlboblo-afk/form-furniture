@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- ==== Basic ==== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ==== SEO ==== -->
+    <title>FORM｜FURNITURE</title>
+    <meta name="description" content="サイトの説明文。" />
+
+    <!-- ==== OGP ==== -->
+    <meta property="og:title" content="FORM｜FURNITURE" />
+    <meta property="og:description" content="サイトの説明文。" />
+    <meta
+      property="og:image"
+      content="https://example.com/assets/img/ogp.png"
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- ==== Icons ==== -->
+    <link rel="icon" href="/assets/icon/favicon.svg" type="image/svg+xml" />
+
+    <!-- ==== CSS ==== -->
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/index.html" class="logo">FORM / FURNITURE</a>
+
+      <button
+        class="drawerButton"
+        aria-label="メニュー"
+        aria-expanded="false"
+        aria-controls="headerMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="headerNav" id="headerMenu">
+        <ul class="headerNavList">
+          <li>
+            <a href="/about.html">ABOUT</a>
+          </li>
+
+          <li>
+            <a href="/product.html">PRODUCT</a>
+          </li>
+
+          <li>
+            <a href="/contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="drawerOverlay"></div>
+
+    <main>
+      <section class="pageHero">
+        <div class="pageHeroContent">
+          <p class="pageHeroMeta">— CONTACT</p>
+
+          <h1 class="pageHeroTitle">CONTACT</h1>
+
+          <p class="pageHeroLead">
+            商品に関するご質問や
+            <br />
+            ご相談など、お気軽にお問い合わせください。
+          </p>
+        </div>
+      </section>
+
+      <section class="contactForm">
+        <div class="contactFormInner">
+          <div class="contactFormHeader">
+            <div class="sectionHeader">
+              <h2>INQUIRY FORM</h2>
+            </div>
+
+            <p class="contactFormLead">お問い合わせフォーム</p>
+          </div>
+
+          <form class="contactFormBody">
+            <div class="formField">
+              <label for="company">会社名</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="株式会社FORM"
+              />
+            </div>
+
+            <div class="formField">
+              <label for="name">お名前</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="山田 太郎"
+                required
+              />
+            </div>
+
+            <div class="formField">
+              <label for="email">メールアドレス</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@example.com"
+                required
+              />
+            </div>
+
+            <div class="formField">
+              <label for="tel">電話番号</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="090-1234-5678"
+              />
+            </div>
+
+            <div class="formField">
+              <label for="message">お問い合わせ内容</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="お問い合わせ内容をご記入ください"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="formSubmit">
+              送信する
+              <span>→</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footerNav">
+        <ul class="footerNavList">
+          <li>
+            <a href="/about.html">ABOUT</a>
+          </li>
+
+          <li>
+            <a href="/product.html">PRODUCT</a>
+          </li>
+
+          <li>
+            <a href="/contact.html">CONTACT</a>
+          </li>
+
+          <li>
+            <a href="/privacypolicy.html">PRIVACY POLICY</a>
+          </li>
+
+          <li>
+            <a href="/legal.html">LEGAL</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="socialList">
+        <li>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <img src="/assets/icon/instagram.svg" alt="" />
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <img src="/assets/icon/facebook.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+
+      <small class="copyright">© FORM / FURNITURE</small>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/contact.js"></script>
+  </body>
+</html>
