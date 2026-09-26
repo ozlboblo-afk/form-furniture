@@ -248,7 +248,7 @@
   min-height: 52rem;
   background:
     linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)),
-    url("/assets/img/about.jpg") center / cover no-repeat;
+    url("/assets/img/about.webp") center / cover no-repeat;
 }
 
 .aboutPreviewImage {

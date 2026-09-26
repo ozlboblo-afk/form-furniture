@@ -276,7 +276,7 @@
 
   background-image:
     linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
-    url("/assets/img/aboutPhilosophy.jpg");
+    url("/assets/img/aboutPhilosophy.webp");
   background-size: cover;
 
   background-position: center;
