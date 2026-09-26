@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://あなたの本番ドメイン/sitemap.xml
+Sitemap: https://form-furniture-ivory.vercel.app//sitemap.xml
