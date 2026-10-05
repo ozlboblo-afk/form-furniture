@@ -12,6 +12,9 @@
   width: 100%;
   height: clamp(520px, 70svh, 680px);
 }
+.heroImg img {
+  object-position: right center;
+}
 
 .heroTitle {
   display: flex;
