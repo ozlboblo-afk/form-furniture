@@ -478,7 +478,7 @@ body.is-fixed {
 .pageHeroContent {
   display: grid;
   align-content: end;
-  min-height: 42rem;
+  min-height: 26rem;
   padding-inline: var(--content-padding);
 }
 

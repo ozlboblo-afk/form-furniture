@@ -156,20 +156,44 @@
           <h2>PICK UP</h2>
         </div>
 
-        <div class="pickupList"></div>
-      </section>
+        <div class="pickupSlider">
+          <div class="pickupList"></div>
 
-      <section class="aboutPreview">
-        <div class="aboutPreviewContent">
-          <h2 class="aboutPreviewLabel">ABOUT US</h2>
+          <div class="pickupNavigation">
+            <button
+              class="pickupArrow pickupPrev"
+              type="button"
+              aria-label="前の商品"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M15 18 9 12l6-6" />
+              </svg>
+            </button>
 
-          <p class="aboutPreviewTitle">
-            空間に、よりそう。
-            <br />
-            暮らしに、のこる。
-          </p>
+            <div class="pickupDots"></div>
 
-          <a href="/about.html" class="textLink">OUR PHILOSOPHY</a>
+            <button
+              class="pickupArrow pickupNext"
+              type="button"
+              aria-label="次の商品"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 

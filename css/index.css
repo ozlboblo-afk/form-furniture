@@ -138,15 +138,18 @@
 .pickupList {
   display: grid;
   position: relative;
+  touch-action: pan-y;
 }
 
 .pickupItem {
   display: grid;
   transform: translateY(1.6rem);
+  align-content: start;
   gap: var(--space-lg);
   padding-inline: var(--content-padding);
 
   opacity: 0;
+  pointer-events: none;
 
   transition:
     opacity 0.5s ease,
@@ -157,8 +160,11 @@
 }
 
 .pickupItem.is-active {
+  position: relative;
+  z-index: 1;
   transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
 
   transition:
     opacity 0.5s ease,
@@ -221,25 +227,85 @@
   grid-column: 2;
 }
 
-.pickupDots {
+.pickupNavigation {
   display: flex;
   justify-content: center;
-  gap: var(--space-xs);
+  align-items: center;
+  gap: var(--space-sm);
   margin-top: var(--space-xl);
 }
 
-.pickupDot {
-  width: 4px;
-  height: 4px;
+.pickupArrow {
+  display: grid;
+  flex: 0 0 auto;
+  width: 4rem;
+  height: 4rem;
   padding: 0;
-  border: 0;
+  border: 1px solid rgb(255 255 255 / 65%);
   border-radius: 50%;
-  background: var(--gray-300);
+  background: rgb(255 255 255 / 85%);
+  color: var(--color-text-primary);
   cursor: pointer;
+  transition:
+    background 0.3s ease,
+    opacity 0.3s ease;
+  place-items: center;
 }
 
-.pickupDot.is-active {
+.pickupArrow:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.pickupArrow svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+@media (hover: hover) {
+  .pickupArrow:not(:disabled):hover {
+    background: var(--white);
+  }
+}
+
+.pickupDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: 0;
+}
+
+.pickupDot {
+  display: grid;
+  flex: 0 0 auto;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  place-items: center;
+}
+
+.pickupDot::before {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  transition: background 0.3s ease;
+  content: "";
+}
+
+.pickupDot.is-active::before {
   background: var(--color-text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pickupArrow,
+  .pickupDot::before {
+    transition: none;
+  }
 }
 
 /* =========================
@@ -458,10 +524,6 @@
     padding-bottom: var(--space-sm);
     grid-column: 2;
     border-bottom: 1px solid var(--color-border-default);
-  }
-
-  .pickupDots {
-    margin-top: var(--space-xl);
   }
 
   /* Contact CTA */
