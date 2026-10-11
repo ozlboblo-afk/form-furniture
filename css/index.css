@@ -3,9 +3,7 @@
 ========================= */
 
 .hero {
-  display: flex;
   position: relative;
-  flex-direction: column;
 }
 
 .heroImg {
@@ -13,19 +11,17 @@
   height: clamp(520px, 70svh, 680px);
 }
 .heroImg img {
-  object-position: right center;
+  object-position: 60% center;
 }
 
 .heroTitle {
-  display: flex;
   position: absolute;
-  align-items: flex-end;
+  top: calc(6.4rem + var(--space-4xl));
+  left: var(--content-padding);
 
-  padding: var(--space-4xl) var(--content-padding);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-display);
   line-height: var(--lh-tight);
   letter-spacing: -0.03em;
-  inset: 0;
 }
 
 /* =========================
@@ -423,6 +419,9 @@
   .heroImg {
     height: calc(100svh - 8rem);
   }
+  .heroImg img {
+    object-position: 70% center;
+  }
 
   /* Product Category */
   .categoryList {
@@ -540,5 +539,12 @@
   .contactImg {
     min-height: 56rem;
     aspect-ratio: auto;
+  }
+}
+
+@media (width >= 1024px) {
+  .heroTitle {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
